@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: rgb(243, 243, 243);
+
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-container {
+    width: 60%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.instagram-phone {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-phone img {
+    height: 50rem;
+}
+
+.instagram-main {
+    width: 45%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.instagram-group {
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    background-color: #FFF;
+    border: 1px solid lightgray;
+}
+
+.instagram-group:nth-child(1) {
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+    margin: 19px 0;
+}
+
+input {
+    width: 70%;
+    margin: 0 0 6px;
+    padding: 9px 0 7px 8px;
+
+    border: 0;
+    background-color: rgb(243, 243, 243);
+}
+
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: rgb(186, 186, 186);
+}
+
+button {
+    width: 74%;
+    padding: 8px;
+    margin: .5rem 0;
+
+    color: #FFF;
+    background-color: #0095f6;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    
+    cursor: pointer;
+}
+
+.instagram-divider {
+    margin: 10px 40px 18px;
+}
+
+.instagram-divider-or {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(133, 133, 133);
+    text-transform: uppercase;
+}
+
+.instagram-divider-or:before,
+.instagram-divider-or:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #000;
+    margin: auto;
+}
+
+.instagram-signup-facebook {
+    color: #385185;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.instagram-password-forget {
+    margin: .75rem 0;
+
+    font-size: 12px;
+}
+
+.instagram-group:nth-child(2) p {
+    margin: 15px;
+}
+
+.instagram-group:nth-child(2) p a {
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #0095f6;
+}
+
+.instagram-app {
+    width: 100%;
+    padding: 1.3rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.instagram-get-app {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.instagram-app p {
+    font-size: 14px;
+}
+
+.instagram-app-download {
+    width: 10rem;
+    height: 3rem;
+
+    border-radius: 10%;
+    background-size: cover;
+}
+
+.instagram-app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.instagram-app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+
