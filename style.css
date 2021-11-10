@@ -1,12 +1,17 @@
+/* propriedades para toda página */
 * {
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
 
     font-size: 16px;
     text-decoration: none;
     font-family: sans-serif;
 }
 
+
+/* propriedades do corpo da página */
 body {
     margin: 0;
     padding: 0;
@@ -28,6 +33,7 @@ body {
     justify-content: start;
 }
 
+/* imagem do celular */
 .instagram-phone {
     width: 50%;
 
@@ -36,10 +42,12 @@ body {
     justify-content: center;
 }
 
+/* imagem do celular */
 .instagram-phone img {
     height: 50rem;
 }
 
+/* parte principal da página */
 .instagram-main {
     width: 45%;
 
@@ -49,6 +57,7 @@ body {
     flex-direction: column;
 }
 
+/* propriedades para duas tags na página */
 .instagram-group {
     width: 100%;
     padding: 10px 0;
@@ -63,15 +72,18 @@ body {
     border: 1px solid lightgray;
 }
 
+/* propriedade somente para a primeira tag da classe */
 .instagram-group:nth-child(1) {
     min-height: 19rem;
 }
 
+/* propriedades para logo do Instagram */
 .instagram-logo {
     height: 3rem;
     margin: 19px 0;
 }
 
+/* propriedades para os input's da página */
 input {
     width: 70%;
     margin: 0 0 6px;
@@ -81,13 +93,15 @@ input {
     background-color: rgb(243, 243, 243);
 }
 
+/* propriedades para o placeholders dos input's */
 input::-webkit-input-placeholder {
     font-size: 14px;
     color: rgb(186, 186, 186);
 }
 
+/* propriedades para o button da página */
 button {
-    width: 74%;
+    width: 70%;
     padding: 8px;
     margin: .5rem 0;
 
@@ -100,51 +114,73 @@ button {
     cursor: pointer;
 }
 
+/* propriedades do área do divisor */
 .instagram-divider {
     margin: 10px 40px 18px;
 }
 
-.instagram-divider-or {
-    display: flex;
-    flex-direction: row;
-
-    font-size: 14px;
+/* propriedades de fonte do span */
+.instagram-divider span {
+    font-size: 12px;
     font-weight: bold;
-    color: rgb(133, 133, 133);
+    color: #8E8E8E;
     text-transform: uppercase;
 }
 
-.instagram-divider-or:before,
-.instagram-divider-or:after {
-    content: "";
-    flex: 1 1;
-    border-bottom: 2px solid #000;
-    margin: auto;
+/* seleciona o filho span da classe para receber propriedades */
+.instagram-divider > span {
+    position: relative;
+    display: inline-block;
 }
 
+/* seleciona o filho span da classe utilizando da pseudo-classes para receber propriedades */
+.instagram-divider > span::before,
+.instagram-divider > span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: 1px;
+    background-color: #8E8E8E;
+}
+
+.instagram-divider > span::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.instagram-divider > span::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+/* propriedades para o link de cadastro com a conta do Facebook */
 .instagram-signup-facebook {
     color: #385185;
     font-weight: bold;
     font-size: 14px;
 }
 
+/* propriedades para o link de esqueci a minha senha */
 .instagram-password-forget {
     margin: .75rem 0;
 
     font-size: 12px;
 }
 
+/* propriedade para o parágrafo cadastre-se*/
 .instagram-group:nth-child(2) p {
     margin: 15px;
 }
 
+/* propriedades para o link de cadastre-se */
 .instagram-group:nth-child(2) p a {
-
     font-size: 14px;
     font-weight: bold;
     color: #0095f6;
 }
 
+/* propriedades da área links de download dos apps */
 .instagram-app {
     width: 100%;
     padding: 1.3rem 0;
@@ -155,6 +191,7 @@ button {
     flex-direction: column;
 }
 
+/* propriedades para organizar os links */
 .instagram-get-app {
     width: 100%;
     padding: 1rem;
@@ -164,10 +201,12 @@ button {
     justify-content: space-evenly;
 }
 
+/* propriedade para o para o parágrafo */
 .instagram-app p {
     font-size: 14px;
 }
 
+/* propriedades das imagens dos links de download */
 .instagram-app-download {
     width: 10rem;
     height: 3rem;
@@ -176,12 +215,64 @@ button {
     background-size: cover;
 }
 
+/* imagem link para download do app na apple */
 .instagram-app-download:nth-child(1) {
     background-image: url('./img/apple-button.png');
 }
 
+/* imagem link para download do app no googleplay */
 .instagram-app-download:nth-child(2) {
     background-image: url('./img/googleplay-button.png');
+}
+
+/* media queries*/
+
+@media (max-width: 1370px) {
+    .instagram-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1166px) {
+    .instagram-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .instagram-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1010px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-container {
+        width: 90%;
+
+        display: contents;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-main {
+        width: 45%;
+    }
+    
+    .instagram-group {
+        border: 1px solid transparent;
+    }
+}
+
+@media (max-width: 820px) {
+    .instagram-container {
+        width: 90%;
+    }
 }
 
 
